@@ -44,7 +44,7 @@ app.post('/', (req, res) => {
           type,
           value
         }
-        console.log(debugObject)
+        console.log(new Date().toLocaleDateString() + ' ' + new Date().toLocaleTimeString(), debugObject)
         res.json({
           success: true,
           debugObject
