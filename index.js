@@ -18,11 +18,9 @@ const getTimeString = () => {
   return date.toLocaleDateString() + ' ' + date.toLocaleTimeString()
 }
 
-
 app.post('/', (req, res) => {
 
   /*
-
   Example POST input:
     {
       "action": {
@@ -30,7 +28,6 @@ app.post('/', (req, res) => {
         "payload": 20
       }
     }
-
    */
 
   const postBody = req.body
