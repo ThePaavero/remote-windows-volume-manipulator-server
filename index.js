@@ -23,24 +23,33 @@ app.post('/', (req, res) => {
 
   const type = req.body.action.type
   const value = req.body.action.value
+  const exePath = '..\\.\\SetVol.exe'
 
   switch (type) {
     case 'setVolume':
-      exec(`..\\.\\SetVol.exe ${value}`, (error) => {
+    default:
+      exec(`${exePath} ${value}`, (error) => {
         if (error !== null) {
           console.log('exec error: ' + error)
+          // Bad. Return early and bail.
+          return res.json({
+            success: false,
+            error: error.message,
+          })
         }
+        // Good. Send something useful back.
+        const debugObject = {
+          type,
+          value
+        }
+        console.log(debugObject)
+        res.json({
+          success: true,
+          debugObject
+        })
       })
       break
   }
-
-  res.json({
-    success: true,
-    debugObject: {
-      type,
-      value
-    }
-  })
 })
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
