@@ -1,5 +1,4 @@
-# Server script that executes a Windows application (see note below) with which one can manipulate Windows' audio volume.
-## POC
+# Server script that executes a Windows application (see note below) with which one can manipulate Windows' audio volume. This is just a POC for fun.
 
 ### Installing
 `git clone https://github.com/ThePaavero/remote-windows-volume-manipulator-server.git`
