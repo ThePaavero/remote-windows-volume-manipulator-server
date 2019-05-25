@@ -22,8 +22,9 @@ app.post('/', (req, res) => {
     }
    */
 
-  const type = req.body.action.type
-  const value = req.body.action.value
+  const postBody = req.body
+  const type = postBody.action.type
+  const value = postBody.action.value
   const exePath = '..\\.\\SetVol.exe'
 
   switch (type) {
@@ -53,4 +54,4 @@ app.post('/', (req, res) => {
   }
 })
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(port, () => console.log(`Volume setting app is listening on port ${port}.`))
