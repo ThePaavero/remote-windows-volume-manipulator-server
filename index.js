@@ -5,6 +5,7 @@ const exec = require('child_process').exec
 
 /**
  * NOTE: This server script needs "SetVol.exe" to be located one directory above this one's.
+ * @link https://rlatour.com/setvol/
  */
 
 app.use(express.json())
