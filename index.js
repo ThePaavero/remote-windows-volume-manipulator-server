@@ -3,6 +3,10 @@ const app = express()
 const port = 4004
 const exec = require('child_process').exec
 
+/**
+ * NOTE: This server script needs "SetVol.exe" to be located one directory above this one's.
+ */
+
 app.use(express.json())
 
 app.post('/', (req, res) => {
