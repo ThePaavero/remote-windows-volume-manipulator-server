@@ -29,7 +29,7 @@ app.post('/', (req, res) => {
       "payload": 20
     }
   }
-   */
+  */
 
   const postBody = req.body
   const type = postBody.action.type
