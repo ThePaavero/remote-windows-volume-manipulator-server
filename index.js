@@ -22,12 +22,13 @@ app.post('/', (req, res) => {
 
   /*
   Example POST input:
-    {
-      "action": {
-        "type": "SET_VOLUME",
-        "payload": 20
-      }
+
+  {
+    "action": {
+      "type": "SET_VOLUME",
+      "payload": 20
     }
+  }
    */
 
   const postBody = req.body
